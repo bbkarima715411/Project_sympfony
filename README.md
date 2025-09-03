@@ -1,4 +1,4 @@
-# Project_sympfony
+Project_sympfony
 
 
 
@@ -16,8 +16,6 @@ Visiteur : parcourir les lots, recherche, voir détails, s’inscrire.
 
 Utilisateur (enchérisseur) : profil, placer enchères, suivre favoris, “payer” (simulation).
 
-Admin : modération des lots, des enchères, des utilisateurs, catégories, paramètres site.
-
 
 Catalogue & enchères
 
@@ -28,7 +26,7 @@ Fiche lot : photos, description, catégorie, prix de départ, estimation valeur 
 
 Alerte simple : message flash si surenchéri ou nouvelle enchère.
 
-“Temps réel” léger : auto-refresh de l’enchère courante toutes les X secondes (AJAX).
+“Temps réel” léger : auto-refresh de l’enchère courante toutes les secondes (AJAX).
 
 
 Comptes & sécurité
@@ -63,10 +61,59 @@ Outils utilisés : Symfony, JS, responive design, ajax, boostrap.
 
 
 
-
-
 Photo génére avec ia 
 
+
+Barre de navigation 
+
+
+Accueil
+
+
+Catégories (menu déroulant)
++++++Mobilier
+
+    +++++Sièges & Fauteuils
+
+    +++++Tables & Bureaux
+
+    +++++Armoires & Commodes
+
+++++++Tableaux & Arts graphiques
+
+    ++++++Peintures anciennes
+
+    ++++++Gravures & Dessins
+
+    ++++++Affiches anciennes
+
++++++++Bijoux & Montres
+
+    ++++++Bijoux anciens
+
+    ++++++Montres de collection
+
+    ++++++Objets précieux
+
+    Monnaies & Médailles
+
+
++++++++Art d’Orient & Ethnique
+
+    +++++Objets asiatiques
+
+    +++++Objets africains
+
+    +++++Objets amérindiens
+
+
+
+Mon compte 
+(si connecté : profil, mes enchères, mes favoris, mes factures)
+
+Contact 
+
+Chatbot (FAQ interactive)
 
 
 
