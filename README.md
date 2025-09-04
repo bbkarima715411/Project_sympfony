@@ -1,122 +1,86 @@
-Project_sympfony
+# Project Symfony - Site d'Enchères d'Antiquités
 
+## Cahier des charges
 
+### Contexte & Objectifs
 
-Cahier des charges
+Réaliser un site d'enchères d'antiquités avec Symfony.
 
+**Caractéristiques principales :**
+- Pas de paiement réel : simulation de paiement et génération d'une facture PDF factice envoyée par mail avec confirmation de commande
+- **Visiteur** : parcourir les lots, recherche, voir détails, s'inscrire
+- **Utilisateur (enchérisseur)** : profil, placer enchères, suivre favoris, "payer" (simulation)
 
+### Catalogue & Enchères
 
-Contexte & objectifs
+**Page d'accueil :**
+- Lots en cours
+- Prochains lots
+- Filtres (catégorie, période, prix)
 
-Réaliser un site d’enchères d’antiquités avec Symfony.
+**Fiche lot :**
+- Photos, description, catégorie
+- Prix de départ, estimation de valeur
+- Date/heure de début et de fin
+- Enchère la plus haute
 
-Pas de paiement réel : simulation de paiement et génération d’une facture PDF factice et envoyé par mail avec confirmation de commande.
+**Fonctionnalités temps réel :**
+- Alerte simple : message flash si surenchéri ou nouvelle enchère
+- "Temps réel" léger : auto-refresh de l'enchère courante toutes les secondes (AJAX)
 
-Visiteur : parcourir les lots, recherche, voir détails, s’inscrire.
+### Comptes & Sécurité
 
-Utilisateur (enchérisseur) : profil, placer enchères, suivre favoris, “payer” (simulation).
+- Inscription / connexion
 
+### Paiement Simulé & Facture
 
-Catalogue & enchères
+- Pour le lot remporté : bouton "Payer (simulation)", statut "payé"
+- Génération PDF facture envoyée par mail
 
-Page d’accueil avec lots en cours, prochains lots, filtres (catégorie, période, prix).
+### Chatbot
 
-Fiche lot : photos, description, catégorie, prix de départ, estimation valeur date/heure de début et de fin, enchère la plus haute.
+- Encoder FAQ
+- Limiter l'accès à toutes questions hors sujet de l'article en enchère
 
 
-Alerte simple : message flash si surenchéri ou nouvelle enchère.
+## Règles
 
-“Temps réel” léger : auto-refresh de l’enchère courante toutes les secondes (AJAX).
+1. **Enchères** : Une enchère doit être supérieure au prix de départ et égale plus ou moins à l'estimation
+2. **Annulation** : Si enchère inférieure ou pas d'enchère, le lot est annulé
+3. **Gagnant** : Le gagnant est déterminé à la clôture de l'enchère
 
+## Outils Utilisés
 
-Comptes & sécurité
+- **Framework** : Symfony
+- **Frontend** : JavaScript, Bootstrap
+- **Design** : Responsive design
+- **Technologies** : AJAX
+- **Images** : Photos générées avec IA 
 
-Inscription / connexion.
 
+## Barre de Navigation
 
+### Menu Principal
 
-Paiement simulé & facture
-
-Pour le lot remporté : bouton “Payer (simulation)”, statut “payé”.
-
-Génération PDF facture envoyé par mail.
-
-
-Chatbot
-
-Encoder FAQ, limiter acces a toutes questions hors sujet de l'article en enchère
-
-
-
-
-Règles
-
-Une enchère doit être doit etre superieur au prix de départ et égale plus ou moin a l'estimation.
-
-Si enchèer inférieur ou pas d'enchère annulé le lot.
-
-Le gagnant est l'enchère est clôture.
-
-Outils utilisés : Symfony, JS, responive design, ajax, boostrap.
-
-
-
-Photo génére avec ia 
-
-
-Barre de navigation 
-
-
-Accueil
-
-
-Catégories (menu déroulant)
-+++++Mobilier
-
-    +++++Sièges & Fauteuils
-
-    +++++Tables & Bureaux
-
-    +++++Armoires & Commodes
-
-++++++Tableaux & Arts graphiques
-
-    ++++++Peintures anciennes
-
-    ++++++Gravures & Dessins
-
-    ++++++Affiches anciennes
-
-+++++++Bijoux & Montres
-
-    ++++++Bijoux anciens
-
-    ++++++Montres de collection
-
-    ++++++Objets précieux
-
-    Monnaies & Médailles
-
-
-+++++++Art d’Orient & Ethnique
-
-    +++++Objets asiatiques
-
-    +++++Objets africains
-
-    +++++Objets amérindiens
-
-
-
-Mon compte 
-(si connecté : profil, mes enchères, mes favoris, mes factures)
-
-Contact 
-
-Chatbot (FAQ interactive)
-
-
-
-
-
-
+- **Accueil**
+- **Catégories** (menu déroulant)
+  - **Mobilier**
+    - Sièges & Fauteuils
+    - Tables & Bureaux
+    - Armoires & Commodes
+  - **Tableaux & Arts graphiques**
+    - Peintures anciennes
+    - Gravures & Dessins
+    - Affiches anciennes
+  - **Bijoux & Montres**
+    - Bijoux anciens
+    - Montres de collection
+    - Objets précieux
+    - Monnaies & Médailles
+  - **Art d'Orient & Ethnique**
+    - Objets asiatiques
+    - Objets africains
+    - Objets amérindiens
+- **Mon compte** (si connecté : profil, mes enchères, mes favoris, mes factures)
+- **Contact**
+- **Chatbot** (FAQ interactive)
